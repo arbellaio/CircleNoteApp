@@ -35,15 +35,9 @@ namespace XamSQLiteRelationships.ViewModels.Notes
         public async Task AddOrUpdateNote()
         {
             var userId = App.Users.LoggedInUserId;                  
-            await App.Notes.AddOrUpdateNoteByUserId(Note, userId);
-            if (NotesList != null)
-            {
-                NotesList.Clear();
-                notesList = await App.Notes.GetNotesByUserId(userId);
-                notesList.Reverse();
-            }
-            NotesList = new ObservableCollection<Note>(notesList);
+            await App.Notes.AddOrUpdateNoteByUserId(Note, userId);           
             await Application.Current.MainPage.Navigation.PopPopupAsync();
+            RefreshCommand.Execute(null);
 
         }
 
