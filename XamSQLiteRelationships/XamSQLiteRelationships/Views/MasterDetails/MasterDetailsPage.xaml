@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:messageListPage="clr-namespace:XamSQLiteRelationships.Views.Messages"
+                  xmlns:masterPage="clr-namespace:XamSQLiteRelationships.Views.Master"
+                  x:Class="XamSQLiteRelationships.Views.MasterDetails.MasterDetailsPage"
+                  MasterBehavior="Popover"
+                  NavigationPage.HasBackButton="False"
+                  NavigationPage.HasNavigationBar="False"
+
+                  >
+
+
+    <MasterDetailPage.Master>
+        <masterPage:MasterPage/>
+    </MasterDetailPage.Master>
+
+    <MasterDetailPage.Detail>
+        <messageListPage:MessagesListPage/>
+    </MasterDetailPage.Detail>
+    
+    
+    
+
+</MasterDetailPage>

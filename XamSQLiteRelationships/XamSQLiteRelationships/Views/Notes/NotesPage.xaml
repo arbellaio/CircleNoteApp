@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:fab="clr-namespace:SuaveControls.Views;assembly=SuaveControls.FloatingActionButton"
+             xmlns:ai="clr-namespace:AiForms.Effects;assembly=AiForms.Effects"
+             xmlns:xfgloss="clr-namespace:XFGloss;assembly=XFGloss"
+             xmlns:notesViewModel="clr-namespace:XamSQLiteRelationships.ViewModels.Notes"
+             x:Class="XamSQLiteRelationships.Views.Notes.NotesPage"
+             Title="My Notes"             
+             >
+
+   <ContentPage.BindingContext>
+        <notesViewModel:NotesViewModel/>
+   </ContentPage.BindingContext>
+    <!-- #4D8441A4 -->
+   
+    <xfgloss:ContentPageGloss.BackgroundGradient>
+        <xfgloss:Gradient x:Name="backgroundColor" StartColor="#4D85d8ce" EndColor="#4DFFFFFF" IsRotationTopToBottom="True"/>
+    </xfgloss:ContentPageGloss.BackgroundGradient>
+
+    <Grid Padding="0,0,0,0" >
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"  />
+            <RowDefinition Height="Auto"  />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackLayout Grid.Row="0" >
+            <Image Source="notebg.jpg" ai:SizeToFit.On="True" ai:SizeToFit.CanExpand="True" Opacity="0.8"/>
+        </StackLayout>
+
+
+        <ListView  x:Name="notesListView" IsPullToRefreshEnabled="True" IsRefreshing="{Binding IsRefreshing}" RefreshCommand="{Binding RefreshCommand}" ItemsSource="{Binding NotesList, Mode=Default}" Grid.Row="1" Grid.RowSpan="2"  HasUnevenRows="true">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Margin="5,0,5,0">
+                            <Grid  HeightRequest="5"/>
+                            <Grid  HeightRequest="80" ai:Border.On="True" ai:Border.Radius="15" Padding="10,10,10,5" BackgroundColor="#FFFFFF">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Label Text="{Binding NoteContent}" Grid.Row="0" FontSize="16" TextColor="Indigo" FontFamily="Avenir-Medium.ttf#Avenir-Medium" />
+                                <Label Text="{Binding CreatedDate , StringFormat='{}{0:MM/dd/yyyy }'}" Grid.Row="0" FontFamily="Avenir-Medium.ttf#Avenir-Medium" FontSize="14" Grid.Column="1" HorizontalOptions="EndAndExpand" HorizontalTextAlignment="End" TextColor="Indigo" />
+                            </Grid>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <StackLayout  Grid.Row="2" HorizontalOptions="End" VerticalOptions="End">
+            <fab:FloatingActionButton ButtonColor="LightSkyBlue"  Clicked="FloatingActionButton_Clicked" Image="addb.png" WidthRequest="90" VerticalOptions="End"  HeightRequest="100" HorizontalOptions="End" />
+        </StackLayout>
+
+    </Grid>
+
+</ContentPage>

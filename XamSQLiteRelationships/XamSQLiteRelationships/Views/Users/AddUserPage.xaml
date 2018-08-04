@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ef="clr-namespace:AiForms.Effects;assembly=AiForms.Effects"
+             xmlns:xfgloss="clr-namespace:XFGloss;assembly=XFGloss"
+             xmlns:customEntry="clr-namespace:XamSQLiteRelationships.Effects.EntryFocusEffect"
+             xmlns:buttonEffect="clr-namespace:XamSQLiteRelationships.Effects.ButtonHoverTapEffect"
+             xmlns:addUserViewModel="clr-namespace:XamSQLiteRelationships.ViewModels.Users"
+             x:Class="XamSQLiteRelationships.Views.Users.AddUserPage"
+             Title="RegisterPage"
+             BackgroundImage="bg.jpg"
+             >
+    <ContentPage.BindingContext>
+        <addUserViewModel:AddUserViewModel/>
+    </ContentPage.BindingContext>
+
+    
+    <!-- <xfgloss:ContentPageGloss.BackgroundGradient> -->
+    <!--     <xfgloss:Gradient x:Name="backgroundColor" StartColor="#FF5B94" EndColor="#8441A4" IsRotationTopToBottom="True"/> -->
+    <!-- </xfgloss:ContentPageGloss.BackgroundGradient> -->
+    <ScrollView>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackLayout Grid.Row="0" Margin="0,15,0,0">
+            <Image Source="logoa.png"/>
+            <Label Text="circle" Margin="0,0,0,20" HorizontalTextAlignment="Center" TextColor="White" FontSize="30" FontFamily="Avenir-Medium.ttf#Avenir-Medium"/>
+        </StackLayout>
+
+        <StackLayout Grid.Row="1" Margin="0,30,0,0">
+            <StackLayout>
+            <Label x:Name="NameLabel" Text="Name" Style="{DynamicResource labelStyle}"/>
+              <Entry x:Name="txtName" Text="{Binding Name}" Style="{DynamicResource entryStyle}" Placeholder=" Name" >
+                  <Entry.Effects>
+                            <customEntry:CustomEntry OnFocusBorderStroke="8" BorderStroke="5" BorderRadius="10" BackgroundColor="#80FFFFFF" OnFocusBorderColor="#C43E7E" />
+                  </Entry.Effects>
+              </Entry>
+                </StackLayout>
+
+            <StackLayout>
+                    <Label Text="Email Address" Style="{DynamicResource labelStyle}"/>
+                    <Entry x:Name="txtEmailAddress" Style="{DynamicResource entryStyle}" Keyboard="Email" Text="{Binding Email}" Placeholder=" Email" >
+                        <Entry.Effects>
+                            <customEntry:CustomEntry OnFocusBorderStroke="8" BorderStroke="5" BorderRadius="10" BackgroundColor="#80FFFFFF" OnFocusBorderColor="#C43E7E" />
+                        </Entry.Effects>
+                    </Entry>
+                </StackLayout>
+
+                <StackLayout>
+                    <Label Text="Password" Style="{DynamicResource labelStyle}"/>
+                    <Entry x:Name="txtPassword" Text="{Binding Password}" Style="{DynamicResource entryStyle}" Placeholder=" Password" IsPassword="True" >
+                        <Entry.Effects>
+                            <customEntry:CustomEntry  OnFocusBorderStroke="8" BorderStroke="5" BorderRadius="10" BackgroundColor="#80FFFFFF" OnFocusBorderColor="#C43E7E" />
+                        </Entry.Effects>
+                        
+                    </Entry>
+                </StackLayout>
+
+        </StackLayout>
+        
+        <StackLayout Grid.Row="2">
+                <Button  Style="{DynamicResource buttonRegister}" Command="{Binding AddUserCommand}" Text="Register">
+                    <Button.Effects>
+                        <buttonEffect:ButtonEffect />
+                    </Button.Effects>
+                </Button>
+            <Label Text="Back to Login" Margin="0,25,0,0" HorizontalTextAlignment="Center" Style="{DynamicResource labelStyle}">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="GoToLoginPage" />
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+
+     </Grid>
+    </ScrollView>
+</ContentPage>

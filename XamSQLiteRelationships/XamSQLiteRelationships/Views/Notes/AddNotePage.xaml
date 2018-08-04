@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"            
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ai="clr-namespace:AiForms.Effects;assembly=AiForms.Effects"
+             xmlns:customEntry="clr-namespace:XamSQLiteRelationships.Effects.EntryFocusEffect"
+                 xmlns:notesViewModel="clr-namespace:XamSQLiteRelationships.ViewModels.Notes"
+                 x:Class="XamSQLiteRelationships.Views.Notes.AddNotePage">
+
+    <pages:PopupPage.BindingContext>
+        <notesViewModel:NotesViewModel/>
+    </pages:PopupPage.BindingContext>
+
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation 
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8"
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+
+    <StackLayout BackgroundColor="CornflowerBlue" ai:Border.On="True" ai:Border.Radius="10"  Padding="20,20,20,20" VerticalOptions="Center" Margin="20,0,20,0" >
+        <StackLayout>
+            <Entry Text="{Binding NoteContent}" Style="{DynamicResource entryStyle}">
+                <Entry.Effects>
+                    <customEntry:CustomEntry OnFocusBorderStroke="5" BorderStroke="5" BorderRadius="10" BackgroundColor="#80FFFFFF" OnFocusBorderColor="#C43E7E" />
+                </Entry.Effects>
+            </Entry>
+            <Button Style="{DynamicResource buttonRegister}" Command="{Binding AddNoteCommand}" Text="Save Note"/>
+        </StackLayout>
+    </StackLayout>
+    
+
+</pages:PopupPage>

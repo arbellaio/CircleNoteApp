@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamSQLiteRelationships.Views.Master.MasterPage"
+             Title="Menu"
+             BackgroundColor="Transparent"
+             BackgroundImage="slide.png" 
+             
+             >
+    <!-- BackgroundColor="#3E4A56"-->
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+
+        <StackLayout x:Name="Profile" Grid.Column="0" Grid.Row="0" Grid.RowSpan="2">
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Tapped="GotoProfilePage" NumberOfTapsRequired="1"/>
+            </StackLayout.GestureRecognizers>
+
+            <StackLayout x:Name="profileDetail" InputTransparent="True" Margin="50,30,0,20" Orientation="Horizontal">
+                <Image Source="profiled.png" InputTransparent="True"/>
+
+            <StackLayout Margin="15,30,0,0" InputTransparent="True">
+                <Label Text="Faizan Aamer" InputTransparent="True" TextColor="White" HorizontalTextAlignment="Center" FontSize="Medium" FontFamily="Avenir-Medium.ttf#Avenir-Medium"/>
+                <Label Text="View Profile" InputTransparent="True" HorizontalTextAlignment="Center" TextColor="White" FontSize="Small" FontFamily="Avenir-Medium.ttf#Avenir-Medium"/>
+            </StackLayout>
+            
+            </StackLayout>
+
+        </StackLayout>
+
+        <StackLayout Grid.Column="0" Grid.Row="2">
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Tapped="GotoChatPage" NumberOfTapsRequired="1"/>
+            </StackLayout.GestureRecognizers>
+            
+            <BoxView Margin="40,0,0,0" BackgroundColor="#80FFFFFF" WidthRequest="1" HeightRequest="1"/>
+
+            <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Spacing="25" InputTransparent="True" Orientation="Horizontal">
+                <Image Source="chat.png" InputTransparent="True"/>
+                <Label BackgroundColor="Transparent" Text="Chat" TextColor="White" FontSize="Medium" FontFamily="Avenir-Medium.ttf#Avenir-Medium"/>
+            </StackLayout>    
+
+        </StackLayout>
+
+
+        <StackLayout Grid.Column="0" Grid.Row="3">
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Tapped="GotoCirclePage" NumberOfTapsRequired="1"/>
+            </StackLayout.GestureRecognizers>
+            <BoxView Margin="60,0,0,0" BackgroundColor="#80FFFFFF" WidthRequest="1" HeightRequest="1"/>
+
+            <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Spacing="25" InputTransparent="True" Orientation="Horizontal">
+                <Image Source="group.png" InputTransparent="True"/>
+                <Label BackgroundColor="Transparent" Text="Circle" TextColor="White" FontSize="Medium" FontFamily="Avenir-Medium.ttf#Avenir-Medium"/>
+            </StackLayout>
+
+        </StackLayout>
+
+
+        <StackLayout Grid.Column="0" Grid.Row="4">
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Tapped="GotoFriendsPage" NumberOfTapsRequired="1"/>
+            </StackLayout.GestureRecognizers>
+            <BoxView Margin="60,0,0,0" BackgroundColor="#80FFFFFF" WidthRequest="1" HeightRequest="1"/>
+
+            <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Spacing="25" InputTransparent="True" Orientation="Horizontal">
+                <Image Source="friendship.png" InputTransparent="True"/>
+                <Label BackgroundColor="Transparent" Text="Friends" TextColor="White" FontSize="Medium" FontFamily="Avenir-Medium.ttf#Avenir-Medium"/>
+            </StackLayout>
+
+        </StackLayout>
+
+
+        <StackLayout Grid.Column="0" Grid.Row="5">
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Tapped="GotoNotesPage" NumberOfTapsRequired="1"/>
+            </StackLayout.GestureRecognizers>
+            <BoxView Margin="60,0,0,0" BackgroundColor="#80FFFFFF" WidthRequest="1" HeightRequest="1"/>
+
+            <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Spacing="25" InputTransparent="True" Orientation="Horizontal">
+                <Image Source="notepad.png" InputTransparent="True"/>
+                <Label BackgroundColor="Transparent" Text="My Notes" TextColor="White" FontSize="Medium" FontFamily="Avenir-Medium.ttf#Avenir-Medium"/>
+            </StackLayout>
+
+        </StackLayout>
+
+        <StackLayout Grid.Column="0" Grid.Row="6">
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Tapped="GotoInsurancePage" NumberOfTapsRequired="1"/>
+            </StackLayout.GestureRecognizers>
+            <BoxView Margin="60,0,0,0" BackgroundColor="#80FFFFFF" WidthRequest="1" HeightRequest="1"/>
+
+            <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Spacing="25" InputTransparent="True" Orientation="Horizontal">
+                <Image Source="insurance.png" InputTransparent="True"/>
+                <Label BackgroundColor="Transparent" Text="Insurance" TextColor="White" FontSize="Medium" FontFamily="Avenir-Medium.ttf#Avenir-Medium"/>
+            </StackLayout>
+
+        </StackLayout>
+
+
+    </Grid>
+
+</ContentPage>

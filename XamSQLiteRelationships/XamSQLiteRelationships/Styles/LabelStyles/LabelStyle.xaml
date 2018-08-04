@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:xfgloss="clr-namespace:XFGloss;assembly=XFGloss">
+    
+
+    <Style x:Key="labelStyle" TargetType="Label">
+        <Setter Property="TextColor" Value="White"/>
+        <!-- <Setter Property="PlaceholderColor" Value="LightGray"/> -->
+        <!-- <Setter Property="WidthRequest" Value="10"/> -->
+        <!-- <Setter Property="HeightRequest" Value="55"/> -->
+        <Setter Property="FontAttributes" Value="Bold"/>
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="FontFamily" Value="Avenir-Medium.ttf#Avenir-Medium"/>
+        <Setter Property="Margin" Value="20,0,0,0"/>
+    </Style>
+
+    <Style x:Key="labelStyleNormal" TargetType="Label">
+        <Setter Property="TextColor" Value="White"/>
+        <!-- <Setter Property="PlaceholderColor" Value="LightGray"/> -->
+        <!-- <Setter Property="WidthRequest" Value="10"/> -->
+        <!-- <Setter Property="HeightRequest" Value="55"/> -->
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="FontFamily" Value="Avenir-Medium.ttf#Avenir-Medium"/>
+        <Setter Property="Margin" Value="10,0,0,0"/>
+    </Style>
+
+</ResourceDictionary>

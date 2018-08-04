@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2018
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamSQLiteRelationships.Android", "XamSQLiteRelationships\XamSQLiteRelationships.Android\XamSQLiteRelationships.Android.csproj", "{1BC6B3FA-2290-4F21-8D55-3D4D39D9CAA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamSQLiteRelationships", "XamSQLiteRelationships\XamSQLiteRelationships\XamSQLiteRelationships.csproj", "{964FB303-9271-4115-91BC-7AF35B96F714}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamSQLiteRelationships.Database", "XamSQLiteRelationships.Database\XamSQLiteRelationships.Database.csproj", "{73765B05-7D1C-44F9-94C0-4136C260AE6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamSQLiteRelationships.Models", "XamSQLiteRelationships.Models\XamSQLiteRelationships.Models.csproj", "{B93BA5C3-08D9-45FC-965F-D66BAF1EC3C1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1BC6B3FA-2290-4F21-8D55-3D4D39D9CAA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BC6B3FA-2290-4F21-8D55-3D4D39D9CAA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BC6B3FA-2290-4F21-8D55-3D4D39D9CAA5}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{1BC6B3FA-2290-4F21-8D55-3D4D39D9CAA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BC6B3FA-2290-4F21-8D55-3D4D39D9CAA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BC6B3FA-2290-4F21-8D55-3D4D39D9CAA5}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{964FB303-9271-4115-91BC-7AF35B96F714}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{964FB303-9271-4115-91BC-7AF35B96F714}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{964FB303-9271-4115-91BC-7AF35B96F714}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{964FB303-9271-4115-91BC-7AF35B96F714}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{964FB303-9271-4115-91BC-7AF35B96F714}.Release|Any CPU.Build.0 = Release|Any CPU
+		{964FB303-9271-4115-91BC-7AF35B96F714}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{73765B05-7D1C-44F9-94C0-4136C260AE6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73765B05-7D1C-44F9-94C0-4136C260AE6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73765B05-7D1C-44F9-94C0-4136C260AE6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73765B05-7D1C-44F9-94C0-4136C260AE6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B93BA5C3-08D9-45FC-965F-D66BAF1EC3C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B93BA5C3-08D9-45FC-965F-D66BAF1EC3C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B93BA5C3-08D9-45FC-965F-D66BAF1EC3C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B93BA5C3-08D9-45FC-965F-D66BAF1EC3C1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {69C19794-FB31-4F66-9D6C-E4AE41583A17}
+	EndGlobalSection
+EndGlobal
