@@ -4,7 +4,6 @@
              xmlns:loginViewModel="clr-namespace:XamSQLiteRelationships.ViewModels.Users"
              xmlns:customEntry="clr-namespace:XamSQLiteRelationships.Effects.EntryFocusEffect"
              xmlns:buttonEffect="clr-namespace:XamSQLiteRelationships.Effects.ButtonHoverTapEffect"
-             xmlns:ce="clr-namespace:Plugin.UI;assembly=Plugin.UI"  
              xmlns:ai="clr-namespace:AiForms.Effects;assembly=AiForms.Effects"
              x:Class="XamSQLiteRelationships.Views.Users.LoginUserPage"
              Title="LoginPage"
