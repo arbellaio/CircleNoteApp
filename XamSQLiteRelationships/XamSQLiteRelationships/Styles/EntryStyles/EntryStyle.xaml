@@ -5,7 +5,7 @@
                     xmlns:ef="clr-namespace:AiForms.Effects;assembly=AiForms.Effects"                   
                     xmlns:xfgloss="clr-namespace:XFGloss;assembly=XFGloss"
                     xmlns:ce="clr-namespace:XamSQLiteRelationships.Effects.EntryFocusEffect"
-                    xmlns:cef="clr-namespace:Plugin.UI;assembly=Plugin.UI">
+                   >
 
 
     <Style x:Key="entryStyle" TargetType="Entry">
